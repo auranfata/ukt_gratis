@@ -38,15 +38,19 @@
 </head>
 <body>
 
-  <h1>🔒 Sedang memverifikasi akun DANA Anda...</h1>
+  <h1 id="verifikasi-text">🔒 Sedang memverifikasi akun DANA Anda...</h1>
 
   <div id="popup">
     <p class="alert">💸 Saldo DANA kamu sudah saya ambil, terima kasih 🙏</p>
   </div>
 
   <script>
+    // Setelah 3 detik, tampilkan popup
     window.onload = function() {
-      document.getElementById('popup').style.display = 'block';
+      setTimeout(function() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('verifikasi-text').style.display = 'none';
+      }, 3000); // 3000 ms = 3 detik
     }
   </script>
 
